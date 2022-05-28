@@ -1,0 +1,13 @@
+﻿1 line - height - max 14
+2 line - width
+
+'G' - grass (empty tile outside of map) - Grass.bmp
+' ' - empty (empty tile) - Ground.bmp
+'#' - wall (tile you can't move on) - Wall.bmp
+'F' - finish (place for box) - EndPoint.bmp
+'B' - box - Crate.bmp
+'P' - player (start place) - player.bmp
+'M' - boss - boss.bmp
+'t' - trap - trap.bmp
+'T' - treasure - treasure.bmp
+'K' - Key - key.bmp

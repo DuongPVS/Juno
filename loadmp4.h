@@ -1,0 +1,282 @@
+#pragma once
+#include "Sample.h"
+
+SDL_Surface* loadSurface( std::string path ) {
+    //The final optimized image
+    SDL_Surface* optimizedSurface = NULL;
+
+    //Load image at specified path
+    SDL_Surface* loadedSurface = IMG_Load( path.c_str() );
+    if( loadedSurface == NULL )
+    {
+        printf( "Unable to load image %s! SDL_image Error: %s\n", path.c_str(), IMG_GetError() );
+    }
+    else
+    {
+        //Convert surface to screen format
+        optimizedSurface = SDL_ConvertSurface( loadedSurface, Sample::screen->format, 0 );
+        if( optimizedSurface == NULL )
+        {
+            printf( "Unable to optimize image %s! SDL Error: %s\n", path.c_str(), SDL_GetError() );
+        }
+
+        //Get rid of old loaded surface
+        SDL_FreeSurface( loadedSurface );
+    }
+
+    return optimizedSurface;
+}
+
+void render() {
+	SDL_UpdateTexture(Sample::scrtex, NULL, Sample::screen->pixels, Sample::screen->pitch);
+	SDL_RenderCopy(Sample::renderer, Sample::scrtex, NULL, NULL);
+	SDL_RenderPresent(Sample::renderer);
+}
+
+void drawLose() {
+    SDL_Surface *i1, *i2, *i3, *i4, *i5, *i6, *i7, *i8, *i9, *i10, *i11, *i12, *i13, *i14, *i15, *i16, *i17, *i18, *i19, *i20, *i21, *i22, *i23, *i24, *i25, *i26, *i27, *i28, *i29, *i30, *i31, *i32, *i33, *i34, *i35, *i36, *i37, *i38, *i39, *i40, *i41, *i42, *i43, *i44, *i45, *i46, *i47, *i48, *i49, *i50, *i51, *i52, *i53, *i54, *i55, *i56, *i57, *i58, *i59, *i60; 
+    SDL_Rect d;
+    d = {0, 0, 1280, 720};
+    i1 = loadSurface("./img/mp4/1.png");
+    SDL_BlitScaled( i1, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i2 = loadSurface("./img/mp4/2.png");
+    SDL_BlitScaled( i2, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i3 = loadSurface("./img/mp4/3.png");
+    SDL_BlitScaled( i3, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i4 = loadSurface("./img/mp4/4.png");
+    SDL_BlitScaled( i4, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i5 = loadSurface("./img/mp4/5.png");
+    SDL_BlitScaled( i5, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i6 = loadSurface("./img/mp4/6.png");
+    SDL_BlitScaled( i6, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i7 = loadSurface("./img/mp4/7.png");
+    SDL_BlitScaled( i7, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i8 = loadSurface("./img/mp4/8.png");
+    SDL_BlitScaled( i8, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i9 = loadSurface("./img/mp4/9.png");
+    SDL_BlitScaled( i9, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i10 = loadSurface("./img/mp4/10.png");
+    SDL_BlitScaled( i10, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i11 = loadSurface("./img/mp4/11.png");
+    SDL_BlitScaled( i11, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i12 = loadSurface("./img/mp4/12.png");
+    SDL_BlitScaled( i12, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i13 = loadSurface("./img/mp4/13.png");
+    SDL_BlitScaled( i13, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i14 = loadSurface("./img/mp4/14.png");
+    SDL_BlitScaled( i14, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i15 = loadSurface("./img/mp4/15.png");
+    SDL_BlitScaled( i15, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i16 = loadSurface("./img/mp4/16.png");
+    SDL_BlitScaled( i16, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i17 = loadSurface("./img/mp4/17.png");
+    SDL_BlitScaled( i17, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i18 = loadSurface("./img/mp4/18.png");
+    SDL_BlitScaled( i18, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i19 = loadSurface("./img/mp4/19.png");
+    SDL_BlitScaled( i19, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i20 = loadSurface("./img/mp4/20.png");
+    SDL_BlitScaled( i20, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i21 = loadSurface("./img/mp4/21.png");
+    SDL_BlitScaled( i21, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i22 = loadSurface("./img/mp4/22.png");
+    SDL_BlitScaled( i22, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i23 = loadSurface("./img/mp4/23.png");
+    SDL_BlitScaled( i23, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i24 = loadSurface("./img/mp4/24.png");
+    SDL_BlitScaled( i24, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i25 = loadSurface("./img/mp4/25.png");
+    SDL_BlitScaled( i25, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i26 = loadSurface("./img/mp4/26.png");
+    SDL_BlitScaled( i26, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i27 = loadSurface("./img/mp4/27.png");
+    SDL_BlitScaled( i27, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i28 = loadSurface("./img/mp4/28.png");
+    SDL_BlitScaled( i28, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i29 = loadSurface("./img/mp4/29.png");
+    SDL_BlitScaled( i29, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i30 = loadSurface("./img/mp4/30.png");
+    SDL_BlitScaled( i30, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i31 = loadSurface("./img/mp4/31.png");
+    SDL_BlitScaled( i31, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i32 = loadSurface("./img/mp4/32.png");
+    SDL_BlitScaled( i32, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i33 = loadSurface("./img/mp4/33.png");
+    SDL_BlitScaled( i33, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i34 = loadSurface("./img/mp4/34.png");
+    SDL_BlitScaled( i34, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i35 = loadSurface("./img/mp4/35.png");
+    SDL_BlitScaled( i35, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i36 = loadSurface("./img/mp4/36.png");
+    SDL_BlitScaled( i36, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i37 = loadSurface("./img/mp4/37.png");
+    SDL_BlitScaled( i37, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i38 = loadSurface("./img/mp4/38.png");
+    SDL_BlitScaled( i38, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i39 = loadSurface("./img/mp4/39.png");
+    SDL_BlitScaled( i39, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i40 = loadSurface("./img/mp4/40.png");
+    SDL_BlitScaled( i40, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i41 = loadSurface("./img/mp4/41.png");
+    SDL_BlitScaled( i41, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i42 = loadSurface("./img/mp4/42.png");
+    SDL_BlitScaled( i42, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i43 = loadSurface("./img/mp4/43.png");
+    SDL_BlitScaled( i43, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i44 = loadSurface("./img/mp4/44.png");
+    SDL_BlitScaled( i44, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i45 = loadSurface("./img/mp4/45.png");
+    SDL_BlitScaled( i45, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i46 = loadSurface("./img/mp4/46.png");
+    SDL_BlitScaled( i46, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i47 = loadSurface("./img/mp4/47.png");
+    SDL_BlitScaled( i47, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i48 = loadSurface("./img/mp4/48.png");
+    SDL_BlitScaled( i48, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i49 = loadSurface("./img/mp4/49.png");
+    SDL_BlitScaled( i49, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i50 = loadSurface("./img/mp4/50.png");
+    SDL_BlitScaled( i50, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i51 = loadSurface("./img/mp4/51.png");
+    SDL_BlitScaled( i51, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i52 = loadSurface("./img/mp4/52.png");
+    SDL_BlitScaled( i52, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i53 = loadSurface("./img/mp4/53.png");
+    SDL_BlitScaled( i53, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    Mix_Chunk *test = Mix_LoadWAV("./mus/test.wav");
+    Mix_PlayChannel( -1, test, 0 );
+    i54 = loadSurface("./img/mp4/54.png");
+    SDL_BlitScaled( i54, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i55 = loadSurface("./img/mp4/55.png");
+    SDL_BlitScaled( i55, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i56 = loadSurface("./img/mp4/56.png");
+    SDL_BlitScaled( i56, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i57 = loadSurface("./img/mp4/57.png");
+    SDL_BlitScaled( i57, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i58 = loadSurface("./img/mp4/58.png");
+    SDL_BlitScaled( i58, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i59 = loadSurface("./img/mp4/59.png");
+    SDL_BlitScaled( i59, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(50);
+    i60 = loadSurface("./img/mp4/60.png");
+    SDL_BlitScaled( i60, NULL, Sample::screen, &d);
+    SDL_UpdateWindowSurface( Sample::window );
+    render(), SDL_Delay(500);
+}
