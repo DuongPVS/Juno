@@ -354,6 +354,8 @@ void Game::update() {
 		createMap();
 		if (!mus->getIsPlayMusic())
 			mus->continuePlayMus();
+		drawMenu();
+		render();
 	}
 	else {
 		if (!victory) {
