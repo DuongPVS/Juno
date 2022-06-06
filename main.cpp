@@ -10,6 +10,5 @@ int main(int argc, char **argv) {
 	game->gameStart();
 
 	game->freeSpace();
-
 	return 0;
 }

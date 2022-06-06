@@ -279,7 +279,7 @@ void Game::handleEvents() {
 				mus->continuePlayMus();
 			break;
 		case QUIT:
-			SDL_Quit();
+			quit = true;
 			break;
 		case NEXT_MAP:
 			if (victory) {
@@ -299,6 +299,9 @@ void Game::handleEvents() {
 		case MENU:
 			int selection = menu->loadMenu();
 			switch (selection) {
+				case -1:
+					quit = true;
+					break;
 				case 1:
 					img->getgPNGSurface();
 					gameMap_->drawMap();
@@ -427,5 +430,5 @@ void Game::loadEnding() {
 	img->getEnd();
 	render();
 	SDL_Delay(30000);
-	SDL_Quit();
+	quit = true;
 }

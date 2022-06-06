@@ -19,7 +19,7 @@ int Menu::chooseMap() {
 		{
 			//User requests quit
 			if( e.type == SDL_QUIT )
-				SDL_Quit();
+				return -1;
             else if  (e.type == SDL_KEYDOWN) 
                 switch (e.key.keysym.sym) {
                     case SDLK_RIGHT:
@@ -90,7 +90,7 @@ bool Menu::loadMainMenu() {
 		{
 			//User requests quit
 			if( e.type == SDL_QUIT )
-				SDL_Quit();
+				return false;
             else if  (e.type == SDL_KEYDOWN) 
                 switch (e.key.keysym.sym) {
                     case SDLK_UP:
@@ -106,6 +106,8 @@ bool Menu::loadMainMenu() {
                                 break;
                             case 2:
                                 mapID = chooseMap();
+								if (mapID == -1)
+									return false;
                                 break;
                             case 3:
                                 return false;
@@ -167,7 +169,7 @@ int Menu::loadMenu() {
 		{
 			//User requests quit
 			if( e.type == SDL_QUIT ) 
-				SDL_Quit();
+				return -1;
             else if  (e.type == SDL_KEYDOWN) 
                 switch (e.key.keysym.sym) {
                     case SDLK_UP:
